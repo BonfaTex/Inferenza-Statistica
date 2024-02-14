@@ -1,0 +1,287 @@
+\documentclass[8pt,a4paper]{article}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage[top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm]{geometry}
+\usepackage{amsfonts}
+\usepackage{etoolbox}
+\usepackage{cancel}
+\usepackage{yhmath}
+\usepackage{color}
+
+
+% Bold
+\renewcommand{\AA}{\mathbb A}
+\newcommand{\BB}{\mathbb{B}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\II}{\mathbb{I}}
+\newcommand{\JJ}{\mathbb{J}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\MM}{\mathbb{M}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\OO}{\mathbb{O}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\renewcommand{\SS}{\mathbb S}
+\newcommand{\TT}{\mathbb{T}}
+\newcommand{\UU}{\mathbb{U}}
+\newcommand{\VV}{\mathbb{V}}
+\newcommand{\WW}{\mathbb{W}}
+\newcommand{\XX}{\mathbb{X}}
+\newcommand{\YY}{\mathbb{Y}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+% Calligraphic
+\newcommand{\Ac}{\mathcal{A}}
+\newcommand{\Bc}{\mathcal{B}}
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Dc}{\mathcal{D}}
+\newcommand{\Ec}{\mathcal{E}}
+\newcommand{\Fc}{\mathcal{F}}
+\newcommand{\Gc}{\mathcal{G}}
+\newcommand{\Hc}{\mathcal{H}}
+\newcommand{\Ic}{\mathcal{I}}
+\newcommand{\Jc}{\mathcal{J}}
+\newcommand{\Kc}{\mathcal{K}}
+\newcommand{\Lc}{\mathcal{L}}
+\newcommand{\Mc}{\mathcal{M}}
+\newcommand{\Nc}{\mathcal{N}}
+\newcommand{\Oc}{\mathcal{O}}
+\newcommand{\Pc}{\mathcal{P}}
+\newcommand{\Qc}{\mathcal{Q}}
+\newcommand{\Rc}{\mathcal{R}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Uc}{\mathcal{U}}
+\newcommand{\Vc}{\mathcal{V}}
+\newcommand{\Wc}{\mathcal{W}}
+\newcommand{\Xc}{\mathcal{X}}
+\newcommand{\Yc}{\mathcal{Y}}
+\newcommand{\Zc}{\mathcal{Z}}
+
+% Bold Big Vector
+\newcommand{\Av}{\mathbf{A}}
+\newcommand{\Bv}{\mathbf{B}}
+\newcommand{\Cv}{\mathbf{C}}
+\newcommand{\Dv}{\mathbf{D}}
+\newcommand{\Ev}{\mathbf{E}}
+\newcommand{\Fv}{\mathbf{F}}
+\newcommand{\Gv}{\mathbf{G}}
+\newcommand{\Hv}{\mathbf{H}}
+\newcommand{\Iv}{\mathbf{I}}
+\newcommand{\Jv}{\mathbf{J}}
+\newcommand{\Kv}{\mathbf{K}}
+\newcommand{\Lv}{\mathbf{L}}
+\newcommand{\Mv}{\mathbf{M}}
+\newcommand{\Nv}{\mathbf{N}}
+\newcommand{\Ov}{\mathbf{O}}
+\newcommand{\Pv}{\mathbf{P}}
+\newcommand{\Qv}{\mathbf{Q}}
+\newcommand{\Rv}{\mathbf{R}}
+\newcommand{\Sv}{\mathbf{S}}
+\newcommand{\Tv}{\mathbf{T}}
+\newcommand{\Uv}{\mathbf{U}}
+\newcommand{\Vv}{\mathbf{V}}
+\newcommand{\Wv}{\mathbf{W}}
+\newcommand{\Xv}{\mathbf{X}}
+\newcommand{\Yv}{\mathbf{Y}}
+\newcommand{\Zv}{\mathbf{Z}}
+
+% Bold Little Vector
+\newcommand{\av}{\mathbf{a}}
+\newcommand{\bv}{\mathbf{b}}
+\newcommand{\cv}{\mathbf{c}}
+\newcommand{\dv}{\mathbf{d}}
+\newcommand{\ev}{\mathbf{e}}
+\newcommand{\fv}{\mathbf{f}}
+\newcommand{\gv}{\mathbf{g}}
+\newcommand{\hv}{\mathbf{h}}
+\newcommand{\iv}{\mathbf{i}}
+\newcommand{\jv}{\mathbf{j}}
+\newcommand{\kv}{\mathbf{k}}
+\newcommand{\lv}{\mathbf{l}}
+\newcommand{\mv}{\mathbf{m}}
+\newcommand{\nv}{\mathbf{n}}
+\newcommand{\ov}{\mathbf{o}}
+\newcommand{\pv}{\mathbf{p}}
+\newcommand{\qv}{\mathbf{q}}
+\newcommand{\rv}{\mathbf{r}}
+\newcommand{\sv}{\mathbf{s}}
+\newcommand{\tv}{\mathbf{t}}
+\newcommand{\uv}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\wv}{\mathbf{w}}
+\newcommand{\xv}{\mathbf{x}}
+\newcommand{\yv}{\mathbf{y}}
+\newcommand{\zv}{\mathbf{z}}
+
+% Overarrow Little Vector
+\newcommand{\bev}{\overrightarrow{\beta}}
+\newcommand{\bbv}{\overrightarrow{b}}
+\newcommand{\erv}{\overrightarrow{\varepsilon}}
+\newcommand{\yev}{\overrightarrow{y}}
+
+\renewcommand{\hat}{\widehat}
+
+% differenziale
+\newcommand{\dspace}{\ } % \, aggiunge un piccolo spazio
+\newcommand{\de}{\mathrm{d}}
+\newcommand{\dx}{\dspace \de x}
+\newcommand{\dy}{\dspace \de y}
+\newcommand{\dt}{\dspace \de t}
+\newcommand{\dS}{\dspace \de S}
+\newcommand{\ds}{\dspace \de s}
+\newcommand{\dz}{\dspace \de z}
+\newcommand{\dw}{\dspace \de w}
+\newcommand{\du}{\dspace \de u}
+\newcommand{\dvv}{\dspace \de v}
+\newcommand{\db}{\dspace \de b}
+\newcommand{\dteta}{\dspace \de \vartheta}
+\newcommand{\dxi}{\dspace \de \xi}
+\newcommand{\dxy}{\dspace \de x \de y}
+\newcommand{\duv}{\dspace \de u \de v}
+\newcommand{\dst}{\dspace \de s \de t}
+\newcommand{\dP}{\dspace \de P}
+\newcommand{\dPP}{\dspace \de \PP}
+\newcommand{\dsig}{\dspace \de \sigma}
+\newcommand{\dth}{\dspace \de \theta}
+\newcommand{\deta}{\dspace \de \eta}
+\newcommand{\dph}{\dspace \de \varphi}
+\newcommand{\dxv}{\dspace \de \mathbf{x}}
+\newcommand{\dSx}{\dspace \de \text{S}(x)}
+
+\newcommand{\Bot}{\perp \!\!\! \perp} % indipendenza
+\usepackage{dsfont} % per funzione indicatrice
+\newcommand{\Ind}{\mathds{1}} % funzione indicatrice
+
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\Det}{det} % determinante
+\DeclareMathOperator{\Var}{Var} % varianza
+\DeclareMathOperator{\Cov}{Cov} % covarianza
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Col}{Col}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Bi}{Bi} % binomiale
+\DeclareMathOperator{\Be}{Be} % bernoulli
+\DeclareMathOperator{\ArgMin}{ArgMin}
+\DeclareMathOperator{\SSSS}{SS}
+
+\newcommand{\Xn}{\overline{X}_n}
+
+\renewcommand{\theta}{\vartheta}
+
+% per far essere piccoli sum e prod
+\makeatletter
+\newcommand{\changeoperator}[1]{%
+  \csletcs{#1@saved}{#1@}%
+  \csdef{#1@}{\changed@operator{#1}}%
+}
+\newcommand{\changed@operator}[1]{%
+  \mathop{%
+    \mathchoice{\textstyle\csuse{#1@saved}}
+               {\csuse{#1@saved}}
+               {\csuse{#1@saved}}
+               {\csuse{#1@saved}}%
+  }%
+}
+\makeatother
+
+\changeoperator{sum}
+\changeoperator{prod}
+ 
+ % Turn off header and footer
+\pagestyle{empty}
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-0.1ex plus -.5ex minus -.2ex}%
+                                {1.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {2ex plus 0ex minus 0ex}%
+                                {1.5ex plus 0ex}%
+                                {\normalfont\scriptsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+%\titlespacing\section{0pt}{0pt plus 0pt minus 0pt}{0pt plus 0pt minus 0pt}
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0ex}
+
+% Per le dimostrazioni:
+
+\definecolor{grey245}{RGB}{245,245,245}
+
+\newtheoremstyle{demo} % Theorem style name
+{0pt}% Space above
+{0pt}% Space below
+{\normalfont}% Body font
+{}% Indent amount
+{\tiny}% Theorem head font --- {\small\bf}
+{.\;}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{\small\thmname{#1}\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
+%{\small\thmname{#1}% Theorem text (e.g. Theorem)
+\thmnote{\nobreakspace\the\thm@notefont\normalfont\bf\scshape\footnotesize{(#3)}}}% Optional theorem note
+
+\theoremstyle{demo}
+\newtheorem*{proofT}{\underline{Proof}}
+
+\RequirePackage[framemethod=default]{mdframed}
+
+\newmdenv[skipabove=5pt,
+skipbelow=0pt,
+rightline=false,
+leftline=false,
+topline=false,
+bottomline=false,
+linecolor=black,
+backgroundcolor=grey245!0,
+innerleftmargin=0pt,
+innerrightmargin=0pt,
+innertopmargin=0pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=2pt,
+innerbottommargin=5pt]{blackBox}
+
+\renewcommand{\qed}{\tag*{$\blacksquare$}}
+\renewenvironment{proof}{\begin{blackBox}\begin{proofT}}{\end{proofT}\end{blackBox}}
+
+% -----------------------------------------------------------------------
+
+\begin{document}
+
+\raggedright
+\footnotesize
+\begin{multicols}{3}
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\input{source}
+
+\end{multicols}
+\end{document}
